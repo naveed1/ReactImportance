@@ -1,0 +1,41 @@
+Difference between block and function scope
+Block scope can be:
+{//block scope}
+if(){ // block scope}
+for(...){ //block scope}
+
+Function scope is:
+function(){//functon scope}
+
+
+In block scope, var will return its value outside of block scope also. Not in function scope.
+Instead use 'let' keyword, its scope is local to block scope
+
+Difference between let, const and var:
+
+for const, the reference remains same. Which means it will always point to the same position in memory
+
+Scalar variables(Integer and String) are always immutable for Javascript
+Array or object are mutable. So const with them means, value can change. However the reference remains constant.
+
+https://jscomplete.com/playground/object-literals
+
+/*
+      const obj = {
+        key: value
+      };
+*/
+
+const mystery = 'answer';
+const InverseOfPI = 1 / Math.PI;
+
+const obj = {
+	p1: 10,
+  p2: 20,
+  f1() {},
+  f2: () => {},
+  [mystery]: 42,
+  InverseOfPI,
+};
+
+console.log(obj);
